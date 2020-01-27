@@ -5,7 +5,7 @@ let time = document.getElementById("input3");
 let confirm = document.getElementById("one");
 let reset = document.getElementById("two");
 let nextId
-// כותרת
+// headline
 
 $('.skew-title').children('span').hover((function () {
     let $el, n;
@@ -23,7 +23,7 @@ $('.skew-title').children('span').hover((function () {
     return $('.flat').removeClass('flat');
 });
 
-// פונקציה ליצירת פתקים 
+//function for creating notes 
 
 function notes() {
 
@@ -49,7 +49,7 @@ function notes() {
     nextId++
     localStorage.setItem("nextId", nextId)
 
-    // פתק
+    // new note
     note.setAttribute("class", "note");
     divTask.setAttribute("class", "divTask");
     divDate.setAttribute("class", "divDate");
@@ -74,7 +74,7 @@ function notes() {
 }
 
 
-// פונקציה לכפתור הוספת הפתקים
+//function for adding new note
 
 confirm.addEventListener("click", function () {
     notes()
@@ -82,7 +82,7 @@ confirm.addEventListener("click", function () {
 })
 
 
-// פונקציה לריסט
+// function for clearing form
 
 
 reset.addEventListener("click", function () {
@@ -91,7 +91,7 @@ reset.addEventListener("click", function () {
     time.value = ""
 })
 
-// פונקציה לפייד אין
+// fade in style function
 
 function fadeIn(element) {
     let op = 0;
@@ -105,7 +105,7 @@ function fadeIn(element) {
     }, 30);
 }
 
-// פונקציה לטעינת העמוד 
+// function for reloading 
 
 function reload() {
 
@@ -125,7 +125,7 @@ function reload() {
             let divTime = document.createElement("span");
             let divX = document.createElement("span");
 
-            // פתק
+            // note
             note.setAttribute("id", i);
             note.setAttribute("class", "note");
             divTask.setAttribute("class", "divTask");
