@@ -1,0 +1,267 @@
+body{
+   
+    margin-top: 0px;
+    background-color:white;
+    font-family: cursive;
+    background-image: url("tile.jpg");
+    width: 100% vw;
+    height: 100% vh;
+}
+
+
+h1{
+    position: absolute;
+    top:0px;
+    font-family: cursive;
+}
+
+
+  .containerr {
+    width: 800px;
+    margin: auto;
+  }
+  .row {
+    position: relative;
+    height: 50px;
+    z-index: 1;
+    clear: both;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .row--intro {
+    padding-top: 20px;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.4;
+  }
+  .row--intro span {
+    font-size: 11px;
+  }
+  .skew-title {
+    font-size: 25px;
+  }
+  .skew-title span {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 50px;
+    margin: auto;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    font-family: cursive;
+    font-weight: 700;
+    font-size: 35.714285714285715px;
+    line-height: 50px;
+    -webkit-transform: skewY(-15deg);
+            transform: skewY(-15deg);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    transition: all 0.2s;
+    cursor: default;
+  }
+  .skew-title span:after,
+  .skew-title span:before {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    background: #185a81;
+    content: ' ';
+    z-index: -1;
+    transition: all 0.2s;
+  }
+  .skew-title span:before {
+    background: rgba(0,0,0,0.1);
+    -webkit-transform: skewY(15deg);
+            transform: skewY(15deg);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  .skew-title span:nth-child(even) {
+    background-color: #144c6e;
+    -webkit-transform: skewY(15deg);
+            transform: skewY(15deg);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    color: #d9d9d9;
+  }
+  .skew-title span:nth-child(even):after {
+    background-color: #144c6e;
+  }
+  .skew-title span:nth-child(even):before {
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+    -webkit-transform: skewY(-15deg);
+            transform: skewY(-15deg);
+  }
+  .skew-title span.flat {
+    -webkit-transform: skewY(0);
+            transform: skewY(0);
+    color: #fff;
+  }
+  .skew-title span.flat:before {
+    -webkit-transform: skewY(0);
+            transform: skewY(0);
+  }
+  .skew-title span.flat:nth-child(even):after {
+    background-color: #185a81;
+  }
+  @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+*{
+  box-sizing:border-box;
+}
+
+
+#inputs{
+  background-image: url("formbg.jpg");
+  width: 700px;
+  height:200px;
+  position: absolute;
+  left: 26%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto
+}
+
+#first{
+position: relative;
+top: 07px;
+left: 132px;
+
+}
+#second{
+  position: relative;
+  top: 72px;
+  left: 50px;
+}
+#third{
+  position: relative;
+  top: 06px;
+  left: 30px;
+}
+#divSpan{
+position: relative;
+top: -52px
+}
+#divButton{
+  position: relative;
+  margin: 0 auto;
+  padding: 0px;
+  width: 45%;
+  top: 50px
+}
+
+button{
+  align-self:center;
+  background:transparent;
+  margin:0 20px;
+ 
+  transition:all .5s ease;
+  color:#41403E;
+  font-size:2rem;
+  letter-spacing:1px;
+  outline:none;
+  box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+ }
+
+  .lined.thin{
+    border:solid 2px #41403E;
+    
+ }
+
+ #one:hover{
+  box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+  color: lawngreen;
+ }
+ #two:hover{
+  box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+  color: red;
+ }
+/* #one{
+  position: relative;
+  top:110px;
+   right:382px
+  
+}
+ #two{
+   position: relative;
+   top: 67px;
+    left:430px;
+ } */
+
+
+ #diVnotes{
+   width: 87%;
+   height: 50%;
+   position: absolute;
+   top: 45%;
+   left: 181px;
+   text-align:left;
+   margin: 0 auto
+ }
+
+ .note{
+  background-image: url("notebg.png");
+  position: relative;
+  display: inline-block;
+  margin: 17px;
+  top: 0px;
+  text-align: left;
+  width: 200px;
+  height: 250px;
+ }
+
+ .divTask{
+  position: absolute;
+  top: 60px;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-y: auto;
+  width: 160px;
+  height: 125px;
+  font-size: 17px;
+ }
+
+ .divDate{
+  position: absolute;
+  top: 197px;
+  font-size: 13px;
+  font-style: bold;
+  text-align: left;
+  left: 7px;
+  color:red;
+ }
+
+ .divTime{
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  text-align: left;
+  font-size: 13px;
+  color: red;
+ }
+
+ .divX{
+  position: absolute;
+  top: 27px;
+  right: 28px;
+  background-image: url("close.png");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  opacity: 0;
+ }
+
+ .divX:hover{
+   opacity:1 ;
+ }
+
+ 
+
