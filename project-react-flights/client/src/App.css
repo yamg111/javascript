@@ -1,0 +1,482 @@
+
+@import url('https://fonts.googleapis.com/css?family=Handlee|Monoton|Bungee+Shade|Rubik+Mono+One|Boogaloo&display=swap');
+.App {
+  text-align: center;
+  margin: 0px !important;
+}
+html,body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0px !important;
+  padding: 0px;
+  box-sizing: border-box; 
+ }
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} 
+
+.App-link {
+  color: #61dafb;
+}
+.modalForAll{
+z-index: 10000;
+position: absolute !important;
+width: 100% !important;
+height: 100% !important;
+background-color: rgba(65, 88, 139, 0.637) !important;
+color: rgb(43, 43, 92);
+}
+.modalInsideForAll{
+ background-image: url("https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); 
+background-size: cover;
+font-family: 'Boogaloo', cursive;
+font-size: 22px;
+
+}
+.loginDiv{
+  background-image:url('https://wallpaperaccess.com/full/1461603.jpg');
+  background-size:cover;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px !important;
+}
+.loginTitle{
+  position: relative;
+  font-family: 'Monoton', cursive;
+top: 2%;
+color: black;
+}
+.styling{
+  border: black 1px solid;
+  width: 70%;
+  height: 75%;
+  position: relative;
+  left: 16%;
+  top: 5%;
+  box-shadow: black 10px 5px 30px 5px;
+}
+
+/* form starts-------------------------------------------------------- */
+.formDiv{
+  border: 1px solid black;
+  width: 55% !important;
+  height: 60% !important;
+  position: relative;
+  left: 22%;
+  top: 20%;
+  box-shadow: black 10px 5px 30px 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  font-size: 20px;
+}
+.input1{
+  width: 40% !important;
+  position: relative;
+  left: 30%;
+}
+.insideForm{
+  margin: 18px;
+}
+.btnSub{
+  margin: 2%;
+}
+.input2{
+  width: 25% !important;
+  display: inline-block !important;
+  margin: 10px;
+  position: relative;
+  left: 15%;
+  margin: 10px;
+  border-radius: 20% 0% 20% 0% !important
+}
+.input3{
+  width: 25% !important;
+  display: inline-block !important;
+  margin: 10px;
+  position: relative;
+  left: 25%;
+  margin: 10px;
+  border-radius: 20% 0% 20% 0% !important;
+}
+.inputPos1{
+  position: relative;
+  left: 18%;
+  margin: 10px;
+
+}
+.inputPos2{
+  position: relative;
+  left: 36%;
+  margin: 10px;
+}
+.modalDiv{
+  font-family: cursive !important;
+  font-size: 30px !important;
+}
+
+.modalDiv:hover{
+  transition: .5s;
+  transform: rotateY(360deg);
+}
+/* form ends--------------------------------------------------- */
+
+
+/* users component */
+@media all and (max-width:1000px) {
+.divSide, .divSide2, .divSide3, .divSide4{ 
+    display: none ;  }
+}
+
+.divSide{
+  position: absolute;
+  left: 100px;
+  top: 400px;
+  border: 1px solid black;
+  background-color: transparent;
+  box-shadow: rgba(51, 63, 100, 0.746) 10px 8px 20px 6px;
+  font-size: 20px;
+  color: white;
+  font-family: cursive;
+}
+.divSide2{
+  position: absolute;
+  right: 50px;
+  top: 700px;
+  border: 1px solid black;
+  background-color: transparent;
+  box-shadow: rgba(51, 63, 100, 0.746) 10px 8px 20px 6px;
+  font-size: 20px;
+  color: white;
+  font-family: cursive;
+}
+
+.divSide3{
+  position: absolute;
+  left: 50px;
+  top: 1200px;
+  border: 1px solid black;
+  background-color: transparent;
+  box-shadow: rgba(51, 63, 100, 0.746) 10px 8px 20px 6px;
+}
+.divSide4{
+  position: absolute;
+ right: 100px;
+  top: 100px;
+  border: 1px solid black;
+  background-color: transparent;
+  box-shadow: rgba(55, 31, 65, 0.746) 10px 8px 20px 6px;
+
+}
+
+.imgDivSide{
+  width: 200x;
+  height: 200px;
+  margin-top: 20px;
+}
+.heyName{
+  display: block !important;
+  color:coral !important;
+  text-decoration: underline;
+}
+/* title start----------------------------------------------- */
+
+.titleUser{
+  font-size: 40px;
+  height: 10%;
+  border: 1px solid black;
+  background: rgb(162,120,246);
+background: radial-gradient(circle, rgba(162, 120, 246, 0.383) 0%, rgba(252,252,252,0.8018557764902836) 100%);
+font-weight: bold;
+font-family:'Bungee Shade', cursive;
+color: rgb(35, 11, 83);
+position:fixed;
+width: 100%;
+z-index: 1000;
+top: 0px;
+margin: 0px !important;
+}
+.title1{
+  animation-name: title1;
+  animation-duration: 3s;
+}
+@keyframes title1{
+from{
+position: relative;
+bottom:30px;
+color: rgb(236, 220, 220);
+}
+to{
+  position: relative;
+  bottom: 0px;
+}
+}.title2{
+  animation-name: title2;
+  animation-duration: 2s;
+}
+@keyframes title2{
+from{
+position: relative;
+left: 150px;
+font-size: 10%;
+font-weight: bold;
+color: rgb(230, 222, 222);
+}
+to{
+  position: relative;
+  left: 0px;
+  font-size: 40%;
+}
+}.title3{
+  animation-name: title3;
+  animation-duration: 2s;
+}
+@keyframes title3{
+from{
+position: relative;
+top:300px;
+color: rgb(230, 222, 222);
+}
+to{
+  position: relative;
+  top: 0px;
+}
+}.title4{
+  animation-name: title4;
+  animation-duration: 3s;
+}
+@keyframes title4{
+from{
+position: relative;
+right: 50px;
+color: rgb(230, 222, 222);
+}
+to{
+  position: relative;
+  right: 0px;
+}
+}.title5{
+  animation-name: title5;
+  animation-duration: 4s;
+}
+@keyframes title5{
+from{
+position: relative;
+bottom: 150px;
+color: rgb(230, 222, 222);
+}
+to{
+  position: relative;
+  bottom: 0px;
+}
+}.title6{
+  animation-name: title6;
+  animation-duration: 1s;
+}
+@keyframes title6{
+from{
+position: relative;
+right: 70px;
+font-size: 30px;
+color: rgb(230, 222, 222);
+
+}
+to{
+  position: relative;
+  right: 0px;
+  font-size: 40px;
+}
+}.title7{
+  animation-name: title7;
+  animation-duration: 3s;
+}
+@keyframes title7{
+from{
+position: relative;
+left: 100px;
+font-size: 60px;
+top: 120px;
+color: rgb(230, 222, 222);
+}
+to{
+  position: relative;
+  left: 0px;
+  font-size: 40px;
+  top: 0px;
+}
+}.title8{
+  animation-name: title8;
+  animation-duration: 5s;
+}
+@keyframes title8{
+from{
+position: relative;
+left: 70px;
+color: rgb(230, 222, 222);
+}
+to{
+  position: relative;
+  left: 0px;
+  
+}
+}
+.title9{
+  animation-name: title9;
+  animation-duration: 3s;
+}
+@keyframes title9{
+from{
+position: relative;
+left: 50px;
+color: rgb(230, 222, 222);
+top: 300px;
+}
+to{
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+}
+.userList{
+  background-image:url('http://wallpaperping.com/wp-content/uploads/2019/05/pexels-photo-844297.jpeg');
+  background-size:cover;
+  position: absolute;
+  background-attachment:fixed;
+  margin: 0px !important;
+  /* position: fixed; */
+}
+.adminList{
+  background-image:url('https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  top: 0px;
+  left: 0px;
+  background-size:cover;
+  position: absolute;
+  background-attachment:fixed;
+  overflow: visible;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+/* title ends---------------------------------------------------------- */
+/* user component---------------------------------------------------- */
+
+.userCard{
+  animation-duration: 5s;
+  animation-name: card;
+  font-style: italic;
+  border-radius: 3%  !important;
+  box-shadow: rgb(226, 211, 211) 10px 5px 30px 5px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.5021358885351015) 35%, rgba(235,230,226,0.6982143199076505) 100%);
+  left: 35%;  
+  margin: 10px;
+  margin-top: 80px;
+  width: 30%;
+  height: 20%;
+  padding: 7px;
+  box-sizing: border-box;
+}
+.userCard:hover{
+transition: 0.5s;
+bottom: 10px;
+position: relative;
+border-radius: 0%  !important;
+box-shadow: rgba(88, 111, 155, 0.514) 20px 10px 40px 5px;
+border: rgba(32, 32, 32, 0.753) 1px solid !important;
+}
+
+.cardTitle{
+  position: absolute;
+  margin:auto;
+  top: 1.5%;
+  left: 43%;
+  font-family: Snell Roundhand, cursive;
+  color: wh ite;
+  font-size: 30%;
+  text-decoration: underline white;
+  animation-name: title;
+  animation-duration: 2s;
+  text-align: center;
+}
+@keyframes title{
+  from{
+    position: absolute;
+    top: 200px;
+
+  }
+  to{
+position: absolute;
+    top: 0px;
+  }
+}
+.cardText{
+ font-weight: bold; 
+ font-size: 15px;
+  text-decoration: underline rgb(144, 23, 160) !important;
+  margin-right:2% ;
+  right:5%;
+  position: relative;
+}
+.informationCard{
+  position: relative;
+  left: 10%;
+  text-align: left;
+}
+
+
+.buttonFollow{
+background-color:  rgba(35, 101, 128, 0.616) !important;
+font-weight: bold !important;
+font-size: 15px !important;
+width: 25%;
+}
+.buttonFollow:active{
+  background-color: rgba(5, 44, 59, 0.616) !important;
+}
+.buttonFollow:hover{
+  background-color: rgba(5, 44, 59, 0.616) !important;
+}
+/* user components ends */
+/* admin components */
+.adminList{
+  background-image:url('./components/air4.jpg');
+  background-size:cover;
+  position: absolute;
+  background-attachment:fixed;
+  overflow: visible;
+}
+.addBtnRepBtn{
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  display: inline;
+}
+@media all and (max-width:1000px) {
+  .buttonAdmin{ 
+      width: 100% !important;
+     }
+  }
+.buttonAdmin{
+  position: relative;
+  margin: 15px;
+  width:300px ;
+  font-family: 'Handlee', cursive;
+  font-size: 22px !important;
+  background-color: rgba(102, 187, 147, 0.452) !important;
+  border-radius: 30% 5%  !important;
+  box-shadow: rgba(0, 0, 0, 0.438) 7px 7px 20px 2px;
+}
+.buttonAdmin:hover{
+  background-color: rgb(102, 187, 147) !important;
+}
+.btnEddit{
+  display:inline-block;
+  width: 8%;
+  height: 8%;
+  margin: 2%;
+}

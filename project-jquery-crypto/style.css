@@ -1,0 +1,450 @@
+html{
+  margin:0;
+  padding:0;
+  width: 100vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 100vh;
+}
+
+
+  #box-1,body{
+    background-image:url('back.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+    overflow: visible;
+     
+  }
+  .height{
+    height: 100vh;
+  }
+  
+  .resize{
+    margin-top:180px !important;
+  }
+ 
+ @media all and (min-width:480px) {
+  .line-1{ 
+    font-size: 74px !important;  }
+}
+
+@media not all and (min-width: 470px) {
+  .line-1{ 
+    font-size: 33px !important;  }
+}
+    /* title------------------------------- */
+    
+  #header{
+    background-size: cover;
+    top: 0%;
+    display: block !important;
+    width: 100%;
+    color: white;
+    font-family: 'Anonymous Pro', monospace;   
+    text-align: center;  
+    background: linear-gradient(0deg, rgba(167,116,15,1) 0%, rgba(255,255,255,0.8130602582830007) 100%);
+    position: fixed;
+    z-index: 10000;
+  }
+  #headerS{
+      height: cover;
+      background-size: cover;
+      top: 0%;
+      display: block !important;
+      width: 100%;
+      color: white;
+      font-family: 'Anonymous Pro', monospace;   
+      text-align: center;  
+      background: radial-gradient(circle, rgba(209,179,8,0.9307073171065301) 0%, rgba(13,11,0,1) 100%);
+     
+    }
+   
+    .line-1{
+        
+        position: relative; 
+        margin: 0 auto;
+        border-right: 2px solid rgba(255,255,255,.75);
+        font-size: 65px;
+        text-align: center;
+        overflow: hidden;
+        height: 15%;
+        display: block;
+    }
+   
+    /* Animation */
+    .anim-typewriter{
+      animation: typewriter 3s steps(44) 1s 1 normal both,
+                 blinkTextCursor 500ms steps(44) infinite normal;
+    }
+    @keyframes typewriter{
+      from{width: 0%;}
+      to{width: 100%;}
+    }
+
+    @keyframes blinkTextCursor{
+      from{border-right-color: rgba(255,255,255,.75);}
+      to{border-right-color: transparent;}
+    }
+
+
+    /* title ends-------------------- */
+  
+
+    
+  .navibtn{
+    position: relative;
+    border-radius: 28px; 
+    box-shadow: 6px 5px 24px #333;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 17px;
+    padding: 16px;
+    text-decoration: none;
+    margin-right: 20px;
+    align-items: center;  
+  }
+  
+  #input{
+    position: relative;
+    display: inline-block;
+    margin: 0 0 0 0 !important;
+    align-items: center;
+  
+
+  }
+  #coinsList{
+     position: relative;
+    
+      
+  }
+  #search{
+    color: white;
+    border: #F0E68C solid 1px !important;
+    display: inline-block;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif
+}
+#search:hover{
+    background-color: #F0E68C !important;
+    border: #F0E68C solid 1px !important;
+    color: black
+}
+.navbar{
+    width: 100% !important;
+    margin-top:50px ;
+     background: rgb(167,116,15);
+    background: linear-gradient(0deg, rgba(167,116,15,1) 0%, rgba(255,255,255,0.8130602582830007) 100%);
+    border-radius: 28px; 
+     border-radius:  28px; 
+}
+.moreInfo{
+  background-image: linear-gradient(to right, #603813 0%, #b29f94 51%, #603813,0.1 100%) !important ;
+}
+
+.moreInfo:hover{
+  background-color: #DAA520 !important;
+  color: white;
+  border: #F0E68C solid 1px !important;
+  transition: .5s;
+
+}
+.btn-primary{
+  background-color:  #F0E68C ;
+  color: black;
+  border: lightsalmon dashed 1px;
+   
+} 
+.navibtn:hover{
+  background-color: #D4AF37;
+  transition: .5s;
+  transform: rotateY(360deg);
+  
+    
+}
+.navibtn:active {
+  color: black !important;
+  
+}
+
+.main-card{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin:10px;
+}
+.custom-control ,custom-switch{
+   position: relative;
+   left: 108px;
+   top: -56px;
+   display: inline-block;
+
+}
+
+/* loader dimond--------------------------------------------------------------------------------- */
+.container {
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 6%;
+}
+#mainDimond{
+  position: absolute;
+  left:42%;
+  top:47%;
+}
+
+.loader {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 75px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.loader-20 {
+    width: 70px;
+    height: 70px;
+    border: 3px dashed #DAA520;
+    -webkit-animation: stars-rotate-reverse 2s linear both infinite;
+    animation: stars-rotate-reverse 2s linear both infinite;
+    background-color: black;
+}
+
+.loader-20 .css-diamond {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    transform: scale(0.3);
+    transform-origin: 50% 100%;
+    border-color: transparent transparent #fff transparent;
+}
+
+.loader-20 .css-diamond:after {
+    border-color: lightgrey transparent transparent transparent;
+}
+
+.css-diamond {
+    border-style: solid;
+    border-color: transparent transparent #ce93d8 transparent;
+    border-width: 0PX 25px 25px 25px;
+    height: 10PX;
+    width: 100px;
+    position: relative;
+    margin: 20px 0 50px 0;
+}
+
+.css-diamond:after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #ce93d8 transparent transparent transparent;
+    border-width: 70px 50px 0 50px;
+}
+
+/* key frames for dimond */
+@-webkit-keyframes stars-rotate-reverse {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes stars-rotate-reverse {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/* loader ends------------------------------------------------------------------- */
+
+/* popup------------------------------------------------------------------------  */
+
+
+
+.popUpBtn{
+    background:url('trashh.png') no-repeat;
+    outline: none;
+    width: 52px;
+    height: 52px;
+    margin: 2px;
+    border:none 
+    
+}
+
+.popUpBtn:active{
+    outline: none;
+}
+/* popup ends-------------------------------------------------------------------- */
+
+.row{
+width: 100%;
+flex-direction: row;
+/* justify-items: center; */
+}
+/*----------------------------------------------------------- chart--------------------------------------------------------------------------- */
+#divLive{
+height: 80%;
+margin-top: 5%;
+}
+
+#chart{
+    background-color: #fff;
+}
+
+/*-----------------------------------------------------------About page----------------------------------------------------------------------  */
+
+ #divAbout{
+height: 100%;
+width: 100%;
+background-image: url("backabout3.jpg");
+background-size: cover;;
+border-radius: 28px;
+margin-bottom: 15px; 
+
+} 
+.spanForCards{
+margin-left: 5px;
+}
+
+.title{
+
+width: 40%;
+height: 20%;
+font-size: 30px;
+color:white;
+font-family: URW Chancery L, cursive;
+margin-bottom: 15px;
+border-radius: 40px;
+}
+.aboutProject{
+  background-image: url("about6.jpg");
+  background-size: cover;
+  width: 45%;
+  height: 350px;
+  margin: 15px;
+  border-radius: 28px ;
+  box-shadow: 6px 5px 24px #333;
+  text-decoration-line:underline ;
+  border:none;
+  outline: none;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  font-weight: 800;
+  text-align: left;
+  font-size: 50px;
+  font-family: cursive;
+}
+.aboutMe{
+  background-image: url("yami.jpg");
+  background-size: cover;
+  width: 45%;
+  height: 350px;
+  margin: 15px;
+  margin-right: 30px;
+  border-radius: 28px ;
+  box-shadow: 8px 7px 29px #333;
+  border:none;
+  outline: none;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  font-weight: 800;
+  text-align: left;
+  font-size: 50px;
+  text-decoration-line:underline ;
+  font-family: cursive;
+}
+
+.aboutProject:focus{
+  text-decoration: none;
+  border:none;
+  outline: none;
+}
+
+.aboutMe:focus{
+  text-decoration: none;
+  border:none;
+  outline: none;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 45%;
+  height: 350px;
+  perspective: 1000px; 
+  margin: 15px;
+  margin-bottom: 15px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  bottom: 20px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  text-decoration-line:underline ;
+  font-family: cursive;
+  font-weight: 700;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 28px;
+
+}
+.flip-back-header{
+  text-decoration-line:underline ;
+  font-family: cursive;
+  font-weight: 700;
+}
+.flip-back-text{
+  font-size: 20px;
+}
+
+/* Style the front side (fallback if image is missing) */
+
+/* Style the back side */
+.flip-box-back {
+ background-image: url("About2.jpg");
+  color: white;
+  transform: rotateY(180deg);
+}
+.fun{
+  border: white 3px solid;
+  font-size: 50px;
+  position: relative;
+  top: 50%;
+  transition: ease-in 0s;
+}
+
+.fun:hover{
+  transition: 1s;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,0.7458333675266982) 0%, rgba(112,112,112,1) 100%);
+font-size: 70px;
+ 
+}
+
