@@ -263,7 +263,7 @@ function popUpX(id) {
 }
 
 
-// פונקציה לכפתור מידע
+// function for information button
 function moreInfo(e) {
     let id = $(e.target).parent()[0].id
     $.ajax({
@@ -342,7 +342,7 @@ function moreInfo(e) {
 
 
 }
-// פונקציה לכפתור חיפוש
+// function for search button
 function searchFun() {
     $.ajax({
         type: `GET`,
