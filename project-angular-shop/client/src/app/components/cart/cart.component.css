@@ -1,0 +1,32 @@
+.cart{
+    margin: 0px !important;
+    border: 1px solid rgb(255, 255, 255);
+}
+.image{
+    width: 60%;
+    height: 40% !important;
+    position: relative;
+    left: 20% !important;
+    top: 0px !important;
+    display: inline !important;
+}
+.details{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    box-sizing: border-box;
+    position: relative;
+    height: 50%;
+}
+.spans{
+    width: 90%;
+    height: 50%;
+}
+.img{
+    width: 100%;
+
+}
+.btn{
+    margin: 10px;
+    background-color: tomato !important;
+}
+

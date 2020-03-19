@@ -1,0 +1,20 @@
+
+<div *ngFor="let car of cart" class="cart">
+    <div><mat-icon class="trash" (click)="del(car)">delete_outline</mat-icon></div>
+    
+    <span class="details">
+      <span class="spans">
+          <span>Product Name: {{car.item_name}}</span>
+          <br>
+          <span>Product Amount: {{car.amount}}</span>
+          <br>
+          <span>Product Price: {{car.price}}₪</span>
+        </span>
+        <span class="img">
+            <img class="image" src="{{car.image_url}}">
+        </span>
+    </span>
+</div>
+<div>total price for payment: <h4>{{totalPrice}}₪</h4></div>
+<button class="btn" mat-raised-button  (click)="order()">Order</button>
+<button class="btn" mat-raised-button (click)="delAll()">Delete all</button>

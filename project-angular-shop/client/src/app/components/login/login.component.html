@@ -1,0 +1,90 @@
+<div class="tracking-in-contract-bck">Yamos</div>
+<div class="runtext-container">
+    <div class="main-runtext">
+    <marquee direction="" onmouseover="this.stop();" onmouseout="this.start();">
+    
+    <div class="holder">
+    
+         <div class="text-container">
+       &nbsp; &nbsp; <img src="https://cdn11.bigcommerce.com/s-pkla4xn3/images/stencil/1280x1280/products/13648/135217/Female-Blusas-Spring-Autumn-Blouse-Office-Lady-Slim-Pink-Shirts-Women-Blouses-Leisure-Long-Sleeve-Plus__49882.1544087736.jpg?c=2?imbypass=on"> &nbsp; <span data-fancybox-group="gallery" class="fancybox"title="THE ELECTRIC LIGHTING ACT: section 35">NEW IN STORE !</span>
+        </div>
+        
+         <div class="text-container">
+       &nbsp; &nbsp; <img src="https://cdn.shopify.com/s/files/1/1316/6125/products/Vnox-Paper-Clip-Pin-Shape-Women-Earrings-Link-Chian-Design-Long-Earring-for-women-Stylish-Jewelry_0e44a1d3-7f31-417d-851f-bed19eeed4f1_1200x1200.jpg?v=1571439151"> &nbsp; <span data-fancybox-group="gallery" class="fancybox" title="Electrical Licence and Notice Form">DON'T MISS, LAST CHANCE TO BUY !</span>
+        </div>
+        
+         <div class="text-container">
+       &nbsp; &nbsp; <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTH5EuCS05F3osze6wXnKUeBDgBQBaIFbV49tc6YmkRhZaADn-e"> &nbsp; <span data-fancybox-group="gallery" class="fancybox"  title="Customers should demand a receipt">FAV ITEM OF THE WEEK !!!</span>
+        </div>
+         
+         <div class="text-container">
+       &nbsp; &nbsp; <img src="https://i.pinimg.com/originals/a2/8b/ac/a28bacee1f84113c53b69aa572bc08b7.jpg"> &nbsp; <span data-fancybox-group="gallery" class="fancybox"  title="Electricians must provide business address and phone number">TOMORROW I WON'T BE HERE ! ;)</span>
+        </div>
+         
+         <div class="text-container">
+       &nbsp; &nbsp; <img src="https://sc02.alicdn.com/kf/HTB1NqULJVXXXXbzXpXXq6xXFXXXj.jpg"> &nbsp; <span data-fancybox-group="gallery" class="fancybox"  title="All jobs 70Amps and over require an electrical drawing done by a certified engineer">ONE CLICK AWAY FROM THIS BAG</span>
+        </div>
+         
+        
+    </div>
+    
+    </marquee>
+    </div>
+    </div>
+    <div class="containerMsg">
+      <span class="msg" *ngIf="chackCart==true">You have an open cart :) 
+        <br>
+        <span *ngIf="totalPrice">price: <span class="yellow">{{totalPrice}}₪</span></span> &nbsp;&nbsp;
+      <span *ngIf="cartDate">Date of creation: <span class="yellow">{{cartDate}}</span></span>
+    </span>
+    <span class="msg lastOrder" *ngIf="lastTime==true">last order in shop: &nbsp;&nbsp;
+      Total price :<span class="yellow">{{cartDate[0].price}}₪</span>&nbsp;&nbsp;
+      Was shipped on the :  <span class="yellow">{{cartDate[0].shipping_date}}</span>
+      <br>
+      Was ordered on the :<span class="yellow">{{cartDate[0].order_date}}</span>
+    </span>
+    <span class="msg" *ngIf="firstTime==true">Welcome to  your first shop !</span>
+  </div>
+    
+<div class="container">
+  
+    <div class="template about divs flip-2-hor-top-1">
+      <div class="aboutData">
+        <h1 class="title">Welcome to Yamos!</h1>
+        <p>In Yamos we hope everyone can find something they like !</p> 
+        <p>We might be new in town, but we are here to Conquer ! ;)</p> 
+        <p>so let's start with the fun ! </p> 
+        <img  class="lips" src="https://i.ya-webdesign.com/images/gold-lips-png-6.png" style="width: 150px; height: 150px;">
+      </div>
+
+    </div>
+
+    <!-- login div -->
+    <div class="template login divs rotate-scale-up-hor">
+        
+        <form class="form" [formGroup]="form" (ngSubmit)="login()">
+      <mat-form-field appearance="legacy">
+          <mat-label>Email:</mat-label>
+          <input formControlName="email" matInput placeholder="Email"> 
+          <mat-icon matSuffix> mail_outline</mat-icon>
+        </mat-form-field>
+        <br/>
+        <mat-form-field appearance="legacy">
+            <mat-label>Password:</mat-label>
+            <input formControlName="password" type="password" matInput placeholder="Password..">
+            <mat-icon matSuffix> vpn_key</mat-icon>
+        </mat-form-field>
+        <br/>
+        <button class="btn" type="submit" mat-raised-button color="primary" [disabled]="form.invalid" *ngIf="!continue">Login</button>
+        <button class="btn" type="submit" mat-raised-button color="primary"  *ngIf="continue" (click)="continueWithShop()">{{continue}}</button>
+        <button class="btn" type="button" mat-raised-button color="primary" (click)="registerNav()">register</button>
+    </form>      
+</div>
+    <div class="template info divs" flip-2-hor-top-1>
+      <div class="infoData">
+        <h1 class="title">Information</h1>
+        <p>Amount of orders in store: {{ordersAmount}}</p>  
+        <p>Amount of items in store: {{itemsAmount}}</p>  
+      </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;margin: 0px; }
+body { margin: 0; font-family: 'Maitree', serif; }
+.mat-tab-body-wrapper{
+    flex-grow: 1;
+  }
+  .iconi{
+    position: absolute;
+    right: 0px;
+    bottom: 6px !important;
+  } 
+
+  .search{
+    position: relative;
+    left: 90% !important;
+    color: white;
+}
+
+.search{
+  position: relative;
+  left: 80% !important;
+}
+.toolBar{
+  background-color:tomato !important;
+  border: rgb(255, 255, 255) 2px solid;
+  height: 9% !important;
+  color: white !important;
+}
+.spanTool{
+  font-family: 'Vast Shadow';
+  color: white;
+  font-size: 30px;
+}

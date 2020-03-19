@@ -1,0 +1,73 @@
+
+.text-pop-up-top {
+	-webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.895, 0.030, 0.685, 0.220) both;
+            animation: text-pop-up-top 0.5s cubic-bezier(0.895, 0.030, 0.685, 0.220) both;
+            position: absolute;
+            top: 70px;
+            font-size: 60px !important;
+            color: rgb(255, 255, 255);
+            left: 41%;
+            font-family: 'Vast Shadow';
+             text-align: center;
+}
+.toolBar{
+    background-color:tomato !important;
+    border: rgb(255, 255, 255) 2px solid;
+    height: 10% !important;
+} 
+
+.container{
+    width: 100% !important; 
+    height: 90% !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #FBAB7E;
+    background-image: linear    -gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    margin: 0px !important;
+    left: 0px !important;
+}
+.container>div{
+    position: relative;
+    top: 15% !important;
+    justify-self: center;
+    width: 80%;
+    height: 70%;
+    border: 1px solid white;
+    overflow-y: auto;
+    text-align: center;
+}
+.name{
+    background-color: yellow !important;
+}
+
+.cart{
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.39) !important;
+}
+.image{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.btn{
+    display: inline !important; 
+    position: absolute;
+    left: 0px !important;
+    top: 0px;
+}
+.h1{
+    display: inline;
+}
+.search{
+    position: absolute;
+    left: 95% !important;
+    top: 3px;
+}
+.marg{
+    margin: 5px !important;
+}

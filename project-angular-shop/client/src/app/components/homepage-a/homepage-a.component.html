@@ -1,0 +1,24 @@
+<mat-toolbar class="toolBar"><span class="spanTool">Yamos</span>  
+    
+<button mat-button (click)="Logout()">Logout</button>
+  </mat-toolbar>
+<div class="container">
+
+  <!-- add item -->
+  <button class="btn" mat-button (click)="openDialog()">Add Item</button>
+  <!-- for main page -->
+<div class="main">
+<div class="catagories">
+  <button mat-button class="cell" *ngFor="let category of categories" (click)="getProducts(category.name)">{{category.name}}</button>
+</div>
+<!-- for card -->
+<div class="products">
+  <div class="example-card" color="primary" *ngFor="let product of products">
+    
+    <img class="imgCard" mat-card-image src={{product.image_url}} alt={{product.item_name}}>
+    <div>{{product.item_name}}</div>
+    <mat-card-subtitle>{{product.price}}₪</mat-card-subtitle>
+    <mat-icon class="icon" (click)="openDi(product)"> border_color</mat-icon>  
+</div>
+</div>
+</div>

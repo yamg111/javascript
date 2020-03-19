@@ -1,0 +1,50 @@
+<div>
+    <form [formGroup]="form2" class="example-form back" #update="ngForm" (ngSubmit)=updateItem(update) >
+            <div class="groupOne">
+                <div class="inputDiv extraDiv">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Name</mat-label>
+                <input  matInput  formControlName="item_name"  [(ngModel)]="data.item_name">
+                <mat-icon class="iconi" *ngIf="form2.controls.item_name.valid">thumb_up</mat-icon>
+                   <mat-icon class="iconi" *ngIf="form2.controls.item_name.invalid && form2.controls.item_name.dirty">thumb_down
+                </mat-icon>
+                <mat-error *ngIf="form2.controls.item_name.hasError('required')">
+                    Item name is <strong>required</strong></mat-error>
+                </mat-form-field>
+            </div>
+            </div>
+
+        <div class="groupTwo2">
+            <div class="inputDiv">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Price</mat-label>
+                    <input  matInput  formControlName="price"  [(ngModel)]="data.price">
+                    <mat-icon class="iconi" *ngIf="form2.controls.price.valid">thumb_up</mat-icon>
+                    <mat-icon class="iconi" *ngIf="form2.controls.price.invalid && form2.controls.price.dirty">thumb_down
+                </mat-icon>
+                <mat-error *ngIf="form2.controls.price.hasError('required')">
+                    Price is <strong>required</strong></mat-error>   
+                </mat-form-field>
+            </div>
+        </div>
+        
+        <div class="groupTwo2">
+            <div class="inputDiv">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Image</mat-label>
+                    <input  matInput  formControlName="image_url" [(ngModel)]="data.image_url" >
+                    <mat-icon class="iconi" *ngIf="form2.controls.image_url.valid">thumb_up</mat-icon>
+                <mat-icon class="iconi" *ngIf="form2.controls.image_url.invalid && form2.controls.image_url.dirty">thumb_down
+                </mat-icon>
+                <mat-error *ngIf="form2.controls.image_url.hasError('required')">
+                    Image is <strong>required</strong></mat-error>   
+                </mat-form-field>
+            </div>
+        </div>
+        
+            
+        <button class="btnT2" type="submit" mat-raised-button color="primary">Update</button>
+            <button  class="btnT2" type="submit" mat-raised-button color="primary" (click)="onNoClick()">Close</button>
+        
+</form>
+    </div>

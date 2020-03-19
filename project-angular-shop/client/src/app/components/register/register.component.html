@@ -1,0 +1,137 @@
+
+
+<div class="container">
+    <mat-tab-group mat-align-tabs="center" dynamicHeight="true">
+        <mat-tab *ngIf="tab==true" class="firstTab" label="First part">
+                <div class="text-pop-up-top">REGISTRATION</div>
+                
+                <form [formGroup]="form" class="example-form" (ngSubmit)=register1()>
+                    <div class="groupOne">
+                        <div class="inputDiv">
+                            <mat-form-field class="example-full-width">
+                        <input style="color:white !important"  class="inputs" matInput placeholder="type id.." type="input" formControlName="id">
+                        <mat-icon class="iconi" *ngIf="form.controls.id.valid">thumb_up</mat-icon>
+                        <mat-icon class="iconi" *ngIf="form.controls.id.invalid && form.controls.id.dirty">thumb_down
+                        </mat-icon>
+                        <mat-error *ngIf="form.controls.id.hasError('required')">
+                            id is <strong>required</strong></mat-error>
+                            <mat-error *ngIf="form.controls.id.hasError('minlength') || form.controls.id.hasError('maxlength')">
+                                id must be <strong>9 charecters</strong></mat-error>
+                                <mat-error *ngIf="form.controls.id.hasError('pattern')">
+                                    id must be <strong>only numbers</strong></mat-error>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="inputDiv">
+                    <mat-form-field class="example-full-width">
+                        <input color="primary" class="inputs" matInput placeholder="type email.." type="email"
+                        formControlName="email">
+                        <mat-icon class="iconi" *ngIf="form.controls.email.valid">thumb_up</mat-icon>
+                        <mat-icon class="iconi" *ngIf="form.controls.email.invalid && form.controls.email.dirty">
+                            thumb_down</mat-icon>
+                        <mat-error *ngIf="form.controls.email.hasError('required')">
+                            email is <strong>required</strong></mat-error>
+                            <mat-error *ngIf="form.controls.email.hasError('email')">
+                                email is <strong>wrong</strong></mat-error>
+                            </mat-form-field>
+                </div>
+            </div>
+            <div class="groupTwo">
+                    <div class="inputDiv">
+                        <mat-form-field class="example-full-width">
+                            <input class="inputs" matInput placeholder="type password.." type="password"
+                            formControlName="password" >
+                            <mat-icon class="iconi" *ngIf="form.controls.password.valid">thumb_up</mat-icon>
+                            <mat-icon class="iconi" *ngIf="form.controls.password.invalid && form.controls.password.dirty">
+                                thumb_down</mat-icon>
+                                <mat-error *ngIf="form.controls.password.hasError('required')">
+                                    password is <strong>required</strong></mat-error>
+                        <mat-error *ngIf="form.controls.password.hasError('minlength')">
+                            password must be at least 4 character</mat-error>
+                        </mat-form-field>
+                </div>
+                
+                <div class="inputDiv">
+                    <mat-form-field class="example-full-width">
+                        <input class="inputs" matInput placeholder="type password again.." type="password"
+                        formControlName="passwordVal">
+                        <mat-icon class="iconi" *ngIf="form.controls.passwordVal.valid">thumb_up</mat-icon>
+                        <mat-icon class="iconi"
+                        *ngIf="form.controls.passwordVal.invalid && form.controls.passwordVal.dirty">thumb_down
+                    </mat-icon>
+                    <mat-error *ngIf="form.controls.passwordVal.hasError('required')">
+                        password validation is <strong>required</strong></mat-error>
+                        <mat-error *ngIf="form.controls.passwordVal.hasError('minlength')">
+                            password must be at least 4 character</mat-error>
+                            <mat-error *ngIf="form.controls.passwordVal.hasError('compare')">
+                                passwords don't match</mat-error>
+                            </mat-form-field> 
+                        </div>
+                    </div>
+                        
+                    <button [disabled]="form.invalid" class="btn" type="submit" mat-raised-button color="primary">Next</button>
+                   
+                </form>
+          
+        </mat-tab>
+        
+        <!-- start of tab 2 -->
+        <mat-tab *ngIf="tab==false" class="firstTab" label="Second part">
+            <div class="text-pop-up-top title2">PART 2</div>
+            <form [formGroup]="form2" class="example-form" (ngSubmit)=sendRegister()>
+                <div class="tab2Div">
+
+                    <div class="groupOne">
+                        <div class="inputDiv extraDiv">
+                            <mat-form-field class="example-full-width">
+                            <mat-label>City</mat-label>
+                            <mat-select formControlName="city" required>
+                                <mat-option *ngFor="let city of cityDrop" [value]="city.name">{{city.name}}</mat-option>
+                            </mat-select>
+                               <mat-icon class="iconi" *ngIf="form2.controls.city.valid">thumb_up</mat-icon>
+                               <mat-icon class="iconi" *ngIf="form2.controls.city.invalid && form2.controls.city.dirty">thumb_down
+                            </mat-icon>
+                            <mat-error *ngIf="form2.controls.city.hasError('required')">
+                                City is <strong>required</strong></mat-error>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="inputDiv">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Street</mat-label>
+                                <input  matInput  formControlName="street" [errorStateMatcher]="matcher"
+                                placeholder="Street..">
+                                <mat-icon class="iconi" *ngIf="form2.controls.street.valid">thumb_up</mat-icon>
+                                <mat-icon class="iconi" *ngIf="form2.controls.street.invalid && form2.controls.street.dirty">thumb_down
+                                </mat-icon>
+                                <mat-error *ngIf="form2.controls.street.hasError('required')">
+                                    street is <strong>required</strong></mat-error>            
+                            <mat-error *ngIf="form2.controls.street.hasError('pattern')">
+                                must contain <strong>letters</strong> and <strong>numbers</strong></mat-error>
+                        </mat-form-field>
+                    </div>
+                    </div>
+
+                    <div class="groupTwo2">
+                        <div class="inputDiv">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Full Name</mat-label>
+                                <input  matInput  formControlName="name" 
+                                placeholder="full name..">
+                                <mat-icon class="iconi" *ngIf="form2.controls.name.valid">thumb_up</mat-icon>
+                            <mat-icon class="iconi" *ngIf="form2.controls.name.invalid && form2.controls.name.dirty">thumb_down
+                            </mat-icon>
+                            <mat-error *ngIf="form2.controls.name.hasError('required')">
+                                Full Name is <strong>required</strong></mat-error>   
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    
+                        <button [disabled]="form2.invalid" class="btnT2" type="submit" mat-raised-button color="primary">Submit</button>
+                        <button  class="btnT2" type="button" mat-raised-button color="primary"(click)="tab=true">Back</button>
+                    
+                </div>
+            </form>
+        </mat-tab>
+    </mat-tab-group>
+</div>

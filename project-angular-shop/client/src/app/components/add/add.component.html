@@ -1,0 +1,74 @@
+<div class="mat-dialog-container">
+<div>
+    <form [formGroup]="form2" class="example-form back" (ngSubmit)=addNewItem(form2)>
+        
+            
+            <div class="groupOne">
+                <div class="inputDiv extraDiv">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Name</mat-label>
+                <input  matInput  formControlName="item_name" placeholder="Name..">
+                <mat-icon class="iconi" *ngIf="form2.controls.item_name.valid">thumb_up</mat-icon>
+                   <mat-icon class="iconi" *ngIf="form2.controls.item_name.invalid && form2.controls.item_name.dirty">thumb_down
+                </mat-icon>
+                <mat-error *ngIf="form2.controls.item_name.hasError('required')">
+                    Item name is <strong>required</strong></mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="inputDiv">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Category Number</mat-label>
+                    <input  matInput  formControlName="category_id" [errorStateMatcher]="matcher"
+                    placeholder="Category..">
+                    <mat-icon class="iconi" *ngIf="form2.controls.category_id.valid">thumb_up</mat-icon>
+                    <mat-icon class="iconi" *ngIf="form2.controls.category_id.invalid && form2.controls.category_id.dirty">thumb_down
+                    </mat-icon>
+                    <mat-error *ngIf="form2.controls.category_id.hasError('required')">
+                        Category Number is <strong>required</strong></mat-error>            
+                </mat-form-field>
+            </div>
+        </div>
+        
+        <div class="groupTwo2">
+            <div class="inputDiv">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Price</mat-label>
+                    <input  matInput  formControlName="price" 
+                    placeholder="full price..">
+                    <mat-icon class="iconi" *ngIf="form2.controls.price.valid">thumb_up</mat-icon>
+                    <mat-icon class="iconi" *ngIf="form2.controls.price.invalid && form2.controls.price.dirty">thumb_down
+                </mat-icon>
+                <mat-error *ngIf="form2.controls.price.hasError('required')">
+                    Price is <strong>required</strong></mat-error>   
+                    <mat-error *ngIf="form2.controls.price.hasError('pattern')">
+                        Price contains only <strong>Numbers</strong></mat-error>   
+                </mat-form-field>
+            </div>
+        </div>
+        
+        <div class="groupTwo2">
+            <div class="inputDiv">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Image</mat-label>
+                    <input  matInput  formControlName="image_url" 
+                    placeholder="Url..">
+                    <mat-icon class="iconi" *ngIf="form2.controls.image_url.valid">thumb_up</mat-icon>
+                <mat-icon class="iconi" *ngIf="form2.controls.image_url.invalid && form2.controls.image_url.dirty">thumb_down
+                </mat-icon>
+                <mat-error *ngIf="form2.controls.image_url.hasError('required')">
+                    Image is <strong>required</strong></mat-error>   
+                </mat-form-field>
+            </div>
+        </div>
+        
+            <button [disabled]="form2.invalid" class="btnT2" type="submit" mat-raised-button color="primary">Submit</button>
+            <button [disabled]="form2.invalid" class="btnT2" type="submit" mat-raised-button color="primary" (click)="onNoClick()">Close</button>
+
+
+        
+        
+</form>
+    </div>
+
+    </div>

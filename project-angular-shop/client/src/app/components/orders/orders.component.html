@@ -1,0 +1,130 @@
+<mat-toolbar class="toolBar" color="primary"><span class="spanTool">Yamos</span>  
+  
+    <button mat-button (click)="logout()">Logout</button>
+</mat-toolbar>
+
+<div class="container">
+    <span class="text-pop-up-top">Orders</span>
+    <!-- <small *ngIf="loading">Searching...</small> -->
+  
+    <div class="cartS">
+     
+          <mat-search-bar class="search" [(ngModel)]="searchVal" ></mat-search-bar>
+        <button class="btn" mat-button (click)="back()">Back to shop</button>
+        <h1 class="h1" >Cart items</h1>
+        <div >total price for payment: <h2 class="h1">{{totalPrice}}₪</h2></div>     
+       <div *ngIf="!searchVal">
+           
+               <div  *ngFor="let car of this.storage.cartItems" class="cart">
+                   <img class="image" src="{{car.image_url}}">
+                   <div>Product Name: {{car.item_name}}</div>
+                   <div>Product Amount: {{car.amount}}</div>
+                   <div>Product Price: {{car.price}}₪</div>
+                </div>
+            
+        </div>
+        <div *ngIf="searchVal"><div class="listGroupItem listGroupItemAction"
+            *ngFor="let result of searchResults | filter: searchVal">
+           <img class="image" src="{{result.image_url}}">
+           <div >Product Name: <span  [class.name]="searchVal" [innerHtml]= "result.item_name |filter:search"> </span></div>
+           <div>Product Amount: {{result.amount}}</div>
+           <div>Product Price: {{result.price}}₪</div>
+       </div></div>
+</div>
+<div class="details">
+    <div *ngIf="!ticket" >  
+        <h1>Shiping details</h1>
+        <form [formGroup]="form2" class="example-form" (ngSubmit)=newOrder()>
+            <div class="tab2Div">
+                <div class="groupOne">
+                    <div class="inputDiv extraDiv">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>City</mat-label>
+                            <input  matInput  formControlName="city" [errorStateMatcher]="matcher"
+                            placeholder="City.." (dblclick)="dbl(form2.controls.city.value)" [value]="empty">
+                            <mat-icon class="iconi" *ngIf="form2.controls.city.valid">thumb_up</mat-icon>
+                            <mat-icon class="iconi" *ngIf="form2.controls.city.invalid && form2.controls.city.dirty">thumb_down
+                    </mat-icon>
+                    <mat-error *ngIf="form2.controls.city.hasError('required')">
+                        City is <strong>required</strong></mat-error>
+                    </mat-form-field>
+                </div>
+                
+                <div class="inputDiv">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Street</mat-label>
+                        <input  matInput  formControlName="street" [errorStateMatcher]="matcher"
+                        placeholder="Street.." (dblclick)="dbl(form2.controls.street.value)"  [value]="empty2">
+                        <mat-icon class="iconi" *ngIf="form2.controls.street.valid">thumb_up</mat-icon>
+                        <mat-icon class="iconi" *ngIf="form2.controls.street.invalid && form2.controls.street.dirty">thumb_down
+                        </mat-icon>
+                        <mat-error *ngIf="form2.controls.street.hasError('required')">
+                            street is <strong>required</strong></mat-error>            
+                            <mat-error *ngIf="form2.controls.street.hasError('pattern')">
+                                must contain <strong>letters</strong> and <strong>numbers</strong></mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="groupTwo2">
+                        <div id="girl" class="inputDiv">
+                            <mat-form-field class="example-full-width">
+                        <mat-label>Shipping Date</mat-label>
+                        <input formControlName="shippingDate" matInput [matDatepicker]="picker" >
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                        <mat-icon class="iconi" *ngIf="form2.controls.shippingDate.valid">thumb_up</mat-icon>
+                        <mat-icon class="iconi" *ngIf="form2.controls.shippingDate.invalid && form2.controls.shippingDate.dirty">thumb_down
+                    </mat-icon>
+                    <mat-error *ngIf="form2.controls.shippingDate.hasError('required')">
+                        Shipping Date is <strong>required</strong></mat-error>   
+                    </mat-form-field>
+                </div>
+            </div>
+       
+            <div class="groupTwo2">
+                <div class="inputDiv">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Credit Card:</mat-label>
+                        <input  matInput  formControlName="creditCard" 
+                        placeholder="full Credit Card..">
+                        <mat-icon class="iconi" *ngIf="form2.controls.creditCard.valid">thumb_up</mat-icon>
+                    <mat-icon class="iconi" *ngIf="form2.controls.creditCard.invalid && form2.controls.creditCard.dirty">thumb_down
+                    </mat-icon>
+                    <mat-error *ngIf="form2.controls.creditCard.hasError('required')">
+                        Credit Card is <strong>required</strong></mat-error>   
+                        
+                        
+                        
+                        <mat-error *ngIf="form2.controls.creditCard.hasError('pattern')">
+                            Credit Card template<strong>is wrong</strong></mat-error>   
+                        </mat-form-field>
+                
+                    </div>
+                </div>
+                
+                <button [disabled]="form2.invalid" class="btnT2" type="submit" mat-raised-button color="primary">Submit</button>
+                
+            </div>
+        </form>
+    </div>
+    <div *ngIf="ticket==true">
+        <h3>Your order was sent and will arrive in a few days !</h3>
+        Download ticket : <button mat-button color="primary" (click)="download()">download</button>
+        <button class="marg" mat-button color="primary" (click)="confirm()">Confirm</button>
+    </div>
+    <div id="pdfContent" >
+        <h3>ORDER TICKET </h3>
+        
+        <div>Total price for payment<span> {{totalPrice}}₪</span></div>
+        <div  *ngFor="let car of this.storage.cartItems" class="cart">
+            <div>Product Name: {{car.item_name}}</div>
+            <div>Product Amount: {{car.amount}}</div>
+            <div>Product Price: {{car.price}}₪</div>
+         </div>
+     </div>
+   
+    
+</div>
+</div>

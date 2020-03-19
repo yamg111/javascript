@@ -1,0 +1,60 @@
+
+
+.mwlResizable{
+    box-sizing: border-box;
+    display: inline;
+}
+
+.sidebar{
+    border: 2px white solid;
+    height: 90.5% !important;
+    width: 25%;
+    background-color: tomato !important;
+}
+.catagories{
+    display: inline;
+    width: 100% !important;
+
+}
+.main{
+    display: inline;
+    width: 60% !important;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    height: 80%;
+    overflow-y: scroll;
+}
+.cell{
+    background-color:tomato;
+    font-size: 22px;
+    padding: 15px;
+    color: rgb(249, 249, 250) !important;
+    border-radius: 20%  !important;
+    margin: 10px !important;
+    outline: none;
+}
+
+
+.imgCard{
+    width: 100% !important;
+    height: 30% !important;
+    align-self: center !important;
+}
+.example-card{
+    width: 20%;
+    height: 20%;
+    margin: 20px;
+    display: inline-block;
+    color: black;
+    background-color: transparent !important; 
+    font-size: 20px !important;
+}   
+
+.btn{
+ background-color: tomato;
+ color: white;
+}
+.yellow{
+    background-color: yellow;
+}
